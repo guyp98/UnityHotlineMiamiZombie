@@ -27,7 +27,7 @@ public class HealthSystem : MonoBehaviour
         if (amount<0) { throw new ArgumentOutOfRangeException(); }
         health += amount;
         health = LimitCorrecteur(health);
-        ChangePlayerSpeed();
+        UpdatePlayerSpeed();
         Dispaly.GetComponent<HealthDisplay>().IncreaseFullHearts(1);
     }
     
@@ -36,8 +36,9 @@ public class HealthSystem : MonoBehaviour
         if (amount < 0) { throw new ArgumentOutOfRangeException(); }
         health -= amount;
         health = LimitCorrecteur(health);
-        ChangePlayerSpeed();
+        UpdatePlayerSpeed();
         Dispaly.GetComponent<HealthDisplay>().DecreaseFullHearts(amount);
+        IsPlayerDead();
     }
 
     public void NewMaxLimit(int amount)
@@ -56,11 +57,13 @@ public class HealthSystem : MonoBehaviour
         }
         else 
         {
-            MaxLimit = MaxLimit + amount;
+            MaxLimit = MaxLimit + amount;//amount is negative
             if (MaxLimit < 0) { MaxLimit = 0; }
             health = LimitCorrecteur(health);
             Dispaly.GetComponent<HealthDisplay>().DecreasePool(-amount);
+            IsPlayerDead();
         }
+        UpdatePlayerSpeed();
 
     }
 
@@ -78,14 +81,23 @@ public class HealthSystem : MonoBehaviour
 
         return correctTo;
     }
-    private void ChangePlayerSpeed()
+    private void UpdatePlayerSpeed()
     {
-        Debug.Log(health / (MaxLimit - MinLimit));
+       // Debug.Log(health / (MaxLimit - MinLimit));
         float presenteg = (float)((float)health / (float)(MaxLimit - MinLimit)) * 1.4f;
         GetComponent<playerMovment>().moveSpeed = presenteg * 8;
     }
-   
-    
+
+    public Canvas GameOverCanvas;
+    private void IsPlayerDead()
+    {
+        if (health==0)
+        {
+            Debug.Log("Player Dead");
+            this.GetComponent<playerMovment>().enabled = false;
+            GameOverCanvas.GetComponent<Fade>().show();
+        }
+    }
     
     //debug under me
     private void Update()
