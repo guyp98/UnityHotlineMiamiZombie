@@ -6,13 +6,15 @@ public class WeaponInHand : MonoBehaviour
 {
 
     public GameObject weaponInHand;
+    
+
 
     public void PutWeaponInHand(GameObject WeaponToPut)
     {
-        
-       weaponInHand = WeaponToPut;
-    }
 
+        weaponInHand = WeaponToPut;
+    }
+    
 
     public void Attack()
     {
