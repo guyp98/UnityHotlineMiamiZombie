@@ -49,7 +49,8 @@ public class FieldOfView : MonoBehaviour
             }
             else
             {
-
+                Collider2D col = raycastHit2D.collider;
+           
                 // Hit object
                 vertex = raycastHit2D.point;
             }
