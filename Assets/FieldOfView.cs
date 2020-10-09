@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Pathfinding;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,8 +11,9 @@ public class FieldOfView : MonoBehaviour
     private float viewDistance;
     private Vector3 origin;
     private float startingAngle;
-
-
+    public enemyGFX enemyGfx;
+    public Transform tra;
+    public GameObject FovObj;
     private void Start()
     {
 
@@ -20,7 +22,7 @@ public class FieldOfView : MonoBehaviour
         GetComponent<MeshFilter>().mesh = mesh;
         fov = 60f;
         viewDistance = 5f;
-        origin = Vector3.zero;
+        origin = tra.position;
     }
 
     private void LateUpdate()
@@ -50,7 +52,12 @@ public class FieldOfView : MonoBehaviour
             else
             {
                 Collider2D col = raycastHit2D.collider;
-           
+                if(col.name == "player")
+                {
+                    enemyGfx.GetComponent<enemyGFX>().enabled = true;
+                    FovObj.SetActive(false);
+                }
+
                 // Hit object
                 vertex = raycastHit2D.point;
             }
