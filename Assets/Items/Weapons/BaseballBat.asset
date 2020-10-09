@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: BaseballBat
   itemType: 0
-  itemAnimetion: {fileID: 9083543691040473459, guid: 4bea8faeb9171c8479b5bc34c66f7b00,
-    type: 3}
+  playerSprite: {fileID: 0}
+  shopSprite: {fileID: 21300004, guid: f094595c900579d4c85a02612d8fa36c, type: 3}
   damge: 0
