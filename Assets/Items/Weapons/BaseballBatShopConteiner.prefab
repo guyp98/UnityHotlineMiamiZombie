@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 5971797659186674535}
   - component: {fileID: 7977801815513480055}
   m_Layer: 5
-  m_Name: AnyTypeSlot 2
+  m_Name: BaseballBatShopConteiner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300002, guid: f094595c900579d4c85a02612d8fa36c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a31506f6889f10438cd3daf37925bc5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
