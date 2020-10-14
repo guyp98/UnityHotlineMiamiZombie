@@ -13,7 +13,7 @@ public class playerMovment : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -23,14 +23,14 @@ public class playerMovment : MonoBehaviour
         movment.y = Input.GetAxisRaw("Vertical");
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        camUpdate();
+        camUpdate(); 
     }
 
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movment * moveSpeed * Time.fixedDeltaTime);
         LookDir();
-        fieldOfView.SetOrigin(rb.position);
+        //fieldOfView.SetOrigin(rb.position);
 
     }
     void LookDir()// calculats the player angle of looking acording to mouse
@@ -39,7 +39,7 @@ public class playerMovment : MonoBehaviour
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
-        fieldOfView.SetAimDirection(new Vector3(lookDir.x, lookDir.y, (int)angle));
+        //fieldOfView.SetAimDirection(new Vector3(lookDir.x, lookDir.y, (int)angle));
 
     }
     void camUpdate()// move cam wuth player
