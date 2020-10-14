@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Tin can
   itemType: 2
-  itemAnimetion: {fileID: 9083543691040473459, guid: 4bea8faeb9171c8479b5bc34c66f7b00,
+  playerSprite: {fileID: 0}
+  shopSprite: {fileID: 1794789180284568853, guid: afff68da22875d04eb1223f95adfb0b7,
     type: 3}
   Energy: 50
