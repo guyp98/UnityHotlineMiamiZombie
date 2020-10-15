@@ -8,9 +8,8 @@ public abstract class ItemObject : ScriptableObject
 {
     public string itemName;
     public ItemType itemType;
-    public Sprite playerSprite;
-    public GameObject shopSprite;
+    public GameObject itemAnimetion;
 
 
-
+    
 }

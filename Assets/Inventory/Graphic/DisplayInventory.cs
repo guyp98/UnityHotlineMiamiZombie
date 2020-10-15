@@ -28,7 +28,7 @@ public class DisplayInventory : MonoBehaviour
     {
         for (int i=0;i<inventory.Inventory.Count;i++)
         {
-            var obj = Instantiate(inventory.Inventory[i].Item.shopSprite,Vector2.zero,Quaternion.identity,transform);
+            var obj = Instantiate(inventory.Inventory[i].Item.itemAnimetion,Vector2.zero,Quaternion.identity,transform);
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
             obj.transform.Find("name").GetComponent<Text>().text= inventory.Inventory[i].Item.name;
             obj.transform.Find("Amount").GetComponent<Text>().text = inventory.Inventory[i].Amount.ToString();
