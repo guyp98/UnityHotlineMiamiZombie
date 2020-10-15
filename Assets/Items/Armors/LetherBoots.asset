@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: LetherBoots
   itemType: 1
-  itemAnimetion: {fileID: 9083543691040473459, guid: 4bea8faeb9171c8479b5bc34c66f7b00,
+  playerSprite: {fileID: 0}
+  shopSprite: {fileID: 1801406574693340928, guid: 74368e73c26593f4588b3f7197640c38,
     type: 3}
   Defens: 0

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Knife
   itemType: 0
-  itemAnimetion: {fileID: 9083543691040473459, guid: 4bea8faeb9171c8479b5bc34c66f7b00,
+  playerSprite: {fileID: 0}
+  shopSprite: {fileID: 6089059513341455938, guid: 69f17901bbe95024ca6b7b1eaca65318,
     type: 3}
   damge: 0
