@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class playerMovment : MonoBehaviour
 {
+    [SerializeField] private FieldOfView fieldOfView;
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     public Camera cam;
@@ -21,14 +21,16 @@ public class playerMovment : MonoBehaviour
     {
         movment.x = Input.GetAxisRaw("Horizontal");
         movment.y = Input.GetAxisRaw("Vertical");
+
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        camUpdate();
+        camUpdate(); 
     }
-    
+
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position+ movment *moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movment * moveSpeed * Time.fixedDeltaTime);
         LookDir();
+        //fieldOfView.SetOrigin(rb.position);
 
     }
     void LookDir()// calculats the player angle of looking acording to mouse
@@ -37,6 +39,8 @@ public class playerMovment : MonoBehaviour
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
+        //fieldOfView.SetAimDirection(new Vector3(lookDir.x, lookDir.y, (int)angle));
+
     }
     void camUpdate()// move cam wuth player
     {
