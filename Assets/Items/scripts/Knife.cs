@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName = "Knife", menuName = "Inventory Items/Weapons/Knife")]
-public class Knife : ItemObject
+public class Knife : WeaponItem
 {
-    public int damge;
+    //public int damge;
 
     private void Awake()
     {

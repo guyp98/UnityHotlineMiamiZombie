@@ -2,12 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TheItem : MonoBehaviour
+public class TheWeapon : MonoBehaviour
 {
-    
-    public ItemObject item;
-
-    
-
-
+    public WeaponItem weapon;
 }

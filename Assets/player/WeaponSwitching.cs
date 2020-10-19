@@ -61,7 +61,7 @@ public class WeaponSwitching : MonoBehaviour
         {
             if (i == selectedWeapon)
             {
-                weapon.parent.GetComponentInParent<WeaponInHand>().PutWeaponInHand(weapon.gameObject) ;
+                weapon.parent.GetComponentInParent<WeaponInHand>().PutWeaponInHand((WeaponItem)weapon.gameObject.GetComponent<TheItem>().item) ;
                 weapon.gameObject.SetActive(true);
             }
             else

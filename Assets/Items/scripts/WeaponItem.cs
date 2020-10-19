@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TheItem : MonoBehaviour
+public class WeaponItem : ItemObject
 {
-    
-    public ItemObject item;
+    public int damge;
+    public float range;
 
     
-
-
 }
