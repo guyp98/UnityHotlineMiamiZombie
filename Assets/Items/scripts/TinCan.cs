@@ -8,6 +8,11 @@ public class TinCan : ItemObject
 
     public int Energy;
 
+    public override void attack()
+    {
+        throw new System.NotImplementedException();
+    }
+
     private void Awake()
     {
         this.itemType = ItemType.Food;

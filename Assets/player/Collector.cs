@@ -11,7 +11,7 @@ public class Collector : MonoBehaviour
         if (other.tag == "items")
         {
             Debug.Log(other.name);
-            var item = other.GetComponent<TheItem>().item;
+            var item = other.GetComponent<TheItem>().theItem;
             if (item != null)
             {
 

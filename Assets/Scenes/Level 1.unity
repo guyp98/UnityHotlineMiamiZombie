@@ -2400,7 +2400,8 @@ GameObject:
   - component: {fileID: 778984001}
   - component: {fileID: 778984000}
   - component: {fileID: 778984008}
-  m_Layer: 0
+  - component: {fileID: 778984004}
+  m_Layer: 9
   m_Name: enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2526,6 +2527,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &778984004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778983998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 024b9628777fc114e98f8e91f6ead0e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxLimit: 0
+  health: 0
 --- !u!114 &778984005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2640,6 +2655,12 @@ PrefabInstance:
     - target: {fileID: 3260018384870482091, guid: 6094f3868df32514bbb8ea5b0c783521,
         type: 3}
       propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: dc0546dde59c56e4a98520425434d87e,
+        type: 2}
+    - target: {fileID: 3260018384870482091, guid: 6094f3868df32514bbb8ea5b0c783521,
+        type: 3}
+      propertyPath: theItem
       value: 
       objectReference: {fileID: 11400000, guid: dc0546dde59c56e4a98520425434d87e,
         type: 2}
@@ -3001,6 +3022,12 @@ PrefabInstance:
     - target: {fileID: 3260018384870482091, guid: 6094f3868df32514bbb8ea5b0c783521,
         type: 3}
       propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 79dae39452d62ae45aeeb18926b12f95,
+        type: 2}
+    - target: {fileID: 3260018384870482091, guid: 6094f3868df32514bbb8ea5b0c783521,
+        type: 3}
+      propertyPath: theItem
       value: 
       objectReference: {fileID: 11400000, guid: 79dae39452d62ae45aeeb18926b12f95,
         type: 2}
@@ -3419,6 +3446,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 689d59b37fcb13d4c8a4c127abe96914,
         type: 2}
+    - target: {fileID: 3260018384870482091, guid: 6094f3868df32514bbb8ea5b0c783521,
+        type: 3}
+      propertyPath: theItem
+      value: 
+      objectReference: {fileID: 11400000, guid: 689d59b37fcb13d4c8a4c127abe96914,
+        type: 2}
     - target: {fileID: 3476852648876944926, guid: 6094f3868df32514bbb8ea5b0c783521,
         type: 3}
       propertyPath: m_Sprite
@@ -3767,6 +3800,12 @@ PrefabInstance:
     - target: {fileID: 3260018384870482091, guid: 6094f3868df32514bbb8ea5b0c783521,
         type: 3}
       propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: e20e4689cd4d4594dab7e43d9dba8004,
+        type: 2}
+    - target: {fileID: 3260018384870482091, guid: 6094f3868df32514bbb8ea5b0c783521,
+        type: 3}
+      propertyPath: theItem
       value: 
       objectReference: {fileID: 11400000, guid: e20e4689cd4d4594dab7e43d9dba8004,
         type: 2}
@@ -4436,6 +4475,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e20e4689cd4d4594dab7e43d9dba8004,
         type: 2}
+    - target: {fileID: 3260018384870482091, guid: 6094f3868df32514bbb8ea5b0c783521,
+        type: 3}
+      propertyPath: theItem
+      value: 
+      objectReference: {fileID: 11400000, guid: 689d59b37fcb13d4c8a4c127abe96914,
+        type: 2}
     - target: {fileID: 3476852648876944926, guid: 6094f3868df32514bbb8ea5b0c783521,
         type: 3}
       propertyPath: m_Sprite
@@ -4536,7 +4581,8 @@ GameObject:
   - component: {fileID: 1659776963}
   - component: {fileID: 1659776962}
   - component: {fileID: 1659776961}
-  m_Layer: 0
+  - component: {fileID: 1659776969}
+  m_Layer: 9
   m_Name: enemy (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4756,6 +4802,20 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
+--- !u!114 &1659776969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659776959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 024b9628777fc114e98f8e91f6ead0e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxLimit: 10
+  health: 10
 --- !u!1 &1684314434
 GameObject:
   m_ObjectHideFlags: 0
@@ -8061,8 +8121,8 @@ GameObject:
   - component: {fileID: 1996457523}
   - component: {fileID: 1996457522}
   - component: {fileID: 1996457526}
-  - component: {fileID: 1996457527}
   - component: {fileID: 1996457528}
+  - component: {fileID: 1996457527}
   m_Layer: 5
   m_Name: GameOverCanvas
   m_TagString: Untagged
@@ -8172,7 +8232,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1996457521}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4dd4455b08cf14fbcf6624630c0d4a, type: 3}
+  m_Script: {fileID: 11500000, guid: 742d3b02aa6df2c45aacca50fac97253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!95 &1996457528

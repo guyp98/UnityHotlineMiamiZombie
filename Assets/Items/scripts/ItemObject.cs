@@ -6,11 +6,14 @@ public enum ItemType{Weapon,Armor,Food}
 
 public abstract class ItemObject : ScriptableObject
 {
-    public string itemName;
-    public ItemType itemType;
+    public  string itemName;
+    protected ItemType itemType;
     public Sprite playerSprite;
     public GameObject shopSprite;
 
 
-
+    public abstract void attack();
+    public abstract void SetOrigin(Vector3 origin);
+    public abstract void SetAimDirection(Vector3 aimDirection);
+   
 }

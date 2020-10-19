@@ -7,6 +7,11 @@ public class LetherBoots : ItemObject
 
     public int Defens;
 
+    public override void attack()
+    {
+        throw new System.NotImplementedException();
+    }
+
     private void Awake()
     {
         this.itemType = ItemType.Armor;

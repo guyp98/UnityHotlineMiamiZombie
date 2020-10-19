@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName ="BaseballBat",menuName ="Inventory Items/Weapons/Baseball Bat")]
-public class BaseballBat : ItemObject
+public class BaseballBat : closeColdWepon
 {
-    public int damge;
+   // public int damge;
 
     private void Awake()
     {
         this.itemType = ItemType.Weapon;
         this.itemName = "BaseballBat";
+    }
+    public void Attack()
+    {
+        attack();
     }
 }
