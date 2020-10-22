@@ -15,6 +15,8 @@ public class enemyGFX : MonoBehaviour
     public bool isBoss = false;
     public float range = 5f;
     public GameObject enemy;
+    public RandomMove RanMove;
+
     void Start()
     {
     }
@@ -34,6 +36,7 @@ public class enemyGFX : MonoBehaviour
             float angleDraw = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
             rb.rotation = angleDraw;
             transform.GetComponent<AIPath>().canMove = true;
+            RanMove.enabled = false;
         }
         else
         {
@@ -43,6 +46,9 @@ public class enemyGFX : MonoBehaviour
             FOV.SetActive(true);
             fieldOfView.SetOrigin(rb.position);
             fieldOfView.SetAimDirection(new Vector3(lookDir.x, lookDir.y, (int)angleDraw));
+            RanMove.bottomLeftLimit = new Vector3(enemy.transform.position.x - 3, enemy.transform.position.y - 3, 0);
+            RanMove.topRightLimit = new Vector3(enemy.transform.position.x + 3, enemy.transform.position.y + 3, 0);
+            RanMove.enabled = true;
             this.enabled = false;
         }
 

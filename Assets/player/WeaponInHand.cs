@@ -10,7 +10,8 @@ public class WeaponInHand : MonoBehaviour
     public void PutWeaponInHand(GameObject WeaponToPut)
     {
         
-       weaponInHand = WeaponToPut;
+        weaponInHand = WeaponToPut;
+        GetComponent<SpriteRenderer>().sprite = WeaponToPut.GetComponent<TheItem>().item.playerSprite;
     }
 
 
